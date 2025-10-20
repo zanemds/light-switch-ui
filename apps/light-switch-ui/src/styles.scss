@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@use '~@angular/material' as mat;
 
 // @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round|Material+Icons+Two+Tone');
@@ -17,7 +18,7 @@ $foreground: white;
   src: url('assets/fonts/Roboto-Regular.ttf') format('opentype');
 }
 
-@include mat-core();
+@include mat.core();
 @include home-component-theme($primary, $accent, $background, $foreground);
 @include light-component-theme($primary, $accent, $background, $foreground);
 @include always-display-component-theme(
