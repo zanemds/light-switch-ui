@@ -8,8 +8,9 @@ describe('AlwaysDisplayComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AlwaysDisplayComponent ]
-    })
+    declarations: [AlwaysDisplayComponent],
+    teardown: { destroyAfterEach: false }
+})
     .compileComponents();
   }));
 

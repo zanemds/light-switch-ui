@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-@use '~@angular/material' as mat;
+@use '@angular/material' as mat;
 
 // @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round|Material+Icons+Two+Tone');
-@import '~@angular/material/theming';
+@import '@angular/material/theming';
 @import '~@treefood-nx-angular/light-switch-module/src/lib/components/home/home.component.theme.scss';
 @import '~@treefood-nx-angular/light-switch-module/src/lib/components/common/light/light.component.theme.scss';
 @import '~@treefood-nx-angular/light-switch-module/src/lib/components/always-display/always-display.component.theme.scss';

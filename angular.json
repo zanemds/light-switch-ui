@@ -52,7 +52,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -90,16 +89,6 @@
             "browserTarget": "light-switch-ui:build"
           }
         },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "apps/light-switch-ui/tsconfig.app.json",
-              "apps/light-switch-ui/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!apps/light-switch-ui/**"]
-          }
-        },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
@@ -128,13 +117,6 @@
               "devServerTarget": "light-switch-ui:serve:production"
             }
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["apps/light-switch-ui-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/light-switch-ui-e2e/**"]
-          }
         }
       }
     },
@@ -154,13 +136,6 @@
             "production": {
               "tsConfig": "libs/light-switch-module/tsconfig.lib.prod.json"
             }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["libs/light-switch-module/tsconfig.lib.json"],
-            "exclude": ["**/node_modules/**", "!libs/light-switch-module/**"]
           }
         }
       },
