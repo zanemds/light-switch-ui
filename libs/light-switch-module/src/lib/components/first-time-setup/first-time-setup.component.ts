@@ -40,11 +40,11 @@ export class FirstTimeSetupComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.discoverer.getBridges().subscribe(bridges => {
-      this.discoveredBridges = bridges;
-      this.selectedBridge = bridges[0];
-      this.getBridgeName();
-    });
+    // this.discoverer.getBridges().subscribe(bridges => {
+    //   this.discoveredBridges = bridges;
+    //   this.selectedBridge = bridges[0];
+    //   this.getBridgeName();
+    // });
     this.storageObserver = timer(0, 2000).subscribe(x => {
       console.log('checking storage');
       this.checkStorage();
