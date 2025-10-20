@@ -58,7 +58,6 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.1102.19",
-    "@angular-devkit/build-ng-packagr": "~0.1002.4",
     "@angular/cli": "11.2.19",
     "@angular/compiler-cli": "^11.2.14",
     "@angular/language-service": "^11.2.14",
@@ -75,7 +74,6 @@
     "eslint": "6.8.0",
     "jest": "25.2.3",
     "jest-preset-angular": "8.1.2",
-    "ng-packagr": "^11.2.4",
     "prettier": "1.19.1",
     "ts-jest": "25.2.1",
     "ts-node": "~7.0.0",
