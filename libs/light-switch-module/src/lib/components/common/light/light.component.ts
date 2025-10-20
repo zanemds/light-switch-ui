@@ -6,7 +6,7 @@ import {
   OnInit,
   ViewChild
 } from '@angular/core';
-import { MatSlider } from '@angular/material/slider';
+import { MatLegacySlider as MatSlider } from '@angular/material/legacy-slider';
 import { Subscription, timer } from 'rxjs';
 import { HueLight } from '../../../dal/models';
 import { HueGroupService } from '../../../dal/services';

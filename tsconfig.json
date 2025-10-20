@@ -7,10 +7,15 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es2020",
+    "target": "ES2022",
     "module": "es2020",
-    "typeRoots": ["node_modules/@types"],
-    "lib": ["es2017", "dom"],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
@@ -18,7 +23,8 @@
       "@treefood-nx-angular/light-switch-module": [
         "libs/light-switch-module/src/index.ts"
       ]
-    }
+    },
+    "useDefineForClassFields": false
   },
   "exclude": ["node_modules", "tmp"],
   "include": ["libs/cpu-info-common/src/index.ts"]
