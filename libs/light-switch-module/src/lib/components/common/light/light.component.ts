@@ -115,10 +115,10 @@ export class LightComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   blurSlider(): void {
-    console.log('blurring slider');
-    if (this.slider) {
-      this.slider.blur();
-    }
+    // console.log('blurring slider');
+    // if (this.slider) {
+    //   this.slider;
+    // }
   }
 
   ngOnDestroy() {

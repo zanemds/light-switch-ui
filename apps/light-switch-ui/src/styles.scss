@@ -1,11 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@use '@treefood-nx-angular/light-switch-module/src/lib/components/home/home.component.theme.scss' as *;
+@use '@treefood-nx-angular/light-switch-module/src/lib/components/common/light/light.component.theme.scss' as *;
+@use '@treefood-nx-angular/light-switch-module/src/lib/components/always-display/always-display.component.theme.scss' as *;
 
-// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round|Material+Icons+Two+Tone');
-@import '~@angular/material/theming';
-@import '~@treefood-nx-angular/light-switch-module/src/lib/components/home/home.component.theme.scss';
-@import '~@treefood-nx-angular/light-switch-module/src/lib/components/common/light/light.component.theme.scss';
-@import '~@treefood-nx-angular/light-switch-module/src/lib/components/always-display/always-display.component.theme.scss';
 
 $primary: #2196f3;
 $accent: #f37f21;
@@ -17,7 +16,25 @@ $foreground: white;
   src: url('assets/fonts/Roboto-Regular.ttf') format('opentype');
 }
 
-@include mat-core();
+@include mat.core();
+
+$my-primary: mat.define-palette(mat.$cyan-palette, 500);
+$my-accent: mat.define-palette(mat.$orange-palette, A200, A100, A400);
+
+$my-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $my-primary,
+      accent: $my-accent
+    ),
+    density: 0
+  )
+);
+
+// Emit theme-dependent styles for common features used across multiple components.
+@include mat.core-theme($my-theme);
+@include mat.all-component-themes($my-theme);
+
 @include home-component-theme($primary, $accent, $background, $foreground);
 @include light-component-theme($primary, $accent, $background, $foreground);
 @include always-display-component-theme(
@@ -132,6 +149,10 @@ h6 {
   .mat-card-content {
     color: transparentize($foreground, 0.4);
   }
+}
+
+.mat-mdc-card {
+  padding: 10px 20px;
 }
 
 .mat-stepper-horizontal,

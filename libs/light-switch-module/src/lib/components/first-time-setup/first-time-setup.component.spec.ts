@@ -8,8 +8,9 @@ describe('FirstTimeSetupComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FirstTimeSetupComponent ]
-    })
+    declarations: [FirstTimeSetupComponent],
+    teardown: { destroyAfterEach: false }
+})
     .compileComponents();
   }));
 
